@@ -18,9 +18,9 @@ function go_modal_project(){ ?>
             <p id="modal-content-post" class="modal-content-post">
                 <?php the_content(); ?>
             </p>
-            <div id="btn-modal-post" class="btn-modal-post">
+            <!-- <div id="btn-modal-post" class="btn-modal-post">
                 <a href="#">WEBSITE COMING SOON</a>
-            </div>
+            </div> -->
         </article>
 
     <?php endwhile; wp_reset_postdata(); ?>

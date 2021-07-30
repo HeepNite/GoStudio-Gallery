@@ -1,7 +1,13 @@
 (function($) {
     var categoriesLength = $('ul > #list-categories-li').length;
     var slideGallery = -1;
-    console.log(categoriesLength);
+    var revItem = $('ul > #list-review-li');
+    var revListLength = $('ul > #list-review-li').length;
+    var arrayRevItems = [];
+    for (var i = 0; i < revListLength; i++) {
+        console.log(revItem[i]);
+    }
+    var sliderRev = -1;
 
     /* categories filter */
     $('#list-categories-li > a').on('click', function(e) {
@@ -32,9 +38,11 @@
     });
 
     /* gallery slider arrow next*/
-    $('#next-slide-arrow').on('click', function() {
+    $('#next-slide-arrow-gallery').on('click', function() {
         if (slideGallery >= categoriesLength - 1) {
-            { slideGallery = 0 }
+            {
+                slideGallery = 0
+            }
         } else {
             slideGallery++;
         }
@@ -45,9 +53,11 @@
     })
 
     /* gallery slider arrow prev*/
-    $('#prev-slide-arrow').on('click', function() {
+    $('#prev-slide-arrow-gallery').on('click', function() {
         if (slideGallery <= 0) {
-            { slideGallery = categoriesLength - 1 }
+            {
+                slideGallery = categoriesLength - 1
+            }
         } else {
             slideGallery--;
         }
@@ -80,6 +90,8 @@
             }
         });
     });
+
+    /* Close button modal window */
     $(document).on('click', '#btn-close-modal', function() {
         var select = $('#btn-close-modal').parent();
         var select2 = select.parent();
@@ -88,4 +100,9 @@
 
 
     })
+
+    /* Review ajax slider generator */
+
+    /* Review slider arrow next */
+
 })(jQuery);
